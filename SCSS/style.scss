@@ -12,6 +12,170 @@ body {
   padding: 20px;
   height: 100%;
 
+  h1 {
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    margin-left: 25px;
+    align-self: flex-start;
+  }
+
+  #tiles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    min-width: 283px;
+    width: 283px;
+    margin-top: 65px;
+
+    .tileBtn {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      #tile1,
+      #tile2,
+      #tile3 {
+        height: 406px;
+        padding: 25px;
+        width: 283px;
+        height: 406px;
+
+        .title{
+          color: $yellow;
+
+          p {
+            margin-bottom: 5px;
+          }
+        }
+        .text {
+          margin-top: 20px;
+          font-size: 14px;
+          line-height: 23px;
+          font-weight: 300;
+        }
+      }
+
+      #tile1 {
+        background-color: $gray;
+        color: $white;
+      }
+
+      #tile2 {
+        background-color: $white;
+        color: $gray;
+      }
+
+      #tile3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 35%;
+        background-color: $gray;
+        color: $yellow;
+        #vid {
+          align-self: center;
+          color: $white;
+          margin-bottom: 100px;
+          border: 1px solid $white;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+
+#hamburger {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  width: 100vw;
+
+  #toggle {
+   background-color: $gray!important;
+
+
+   #toggleText {
+    color: $white!important;
+    }
+  } 
+
+  #hamburgerBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $gray;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    padding: 0;
+    margin: 10px;
+
+    &:focus{
+      box-shadow: none;
+    }
+
+    svg {
+      color: $white;
+      stroke-width: 1; 
+      stroke: $white;
+    }
+  }
+}
+
+#readBtn {
+  align-self: flex-start;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0;
+  color: $yellow;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: .9rem;
+  
+}
+
+@media screen and (min-width: 750px) {
+
+  body {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    height: 100vh;
+
+    h1 {
+      align-self: center;
+      font-size: 1.5rem; 
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+
+  body {
+
+    h1 {
+      font-size: 3rem; 
+    }
+
+    #tiles {
+      flex-direction: row;
+      gap: 60px;
+      width: 100%;
+      margin-top: 0;
+    }
+
+  }
+
   #hamburger {
     position: absolute;
     top: 5px;
@@ -36,8 +200,8 @@ body {
       align-items: center;
       background-color: $gray;
       border-radius: 50%;
-      height: 55px;
-      width: 55px;
+      height: 75px;
+      width: 75px;
       padding: 0;
       margin: 10px;
   
@@ -49,32 +213,12 @@ body {
         color: $white;
         stroke-width: 1; 
         stroke: $white;
+        height: 50px;
+        width: 50px;
       }
     }
   }
-
-  .navbar {
-    background-color: $green!important;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .navbar-toggler {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: $gray!important;
-      height: 56px;
-      width: 56px;
-      border-radius: 50%;
-
-      svg {
-        color: $white;
-        stroke-width: 1; 
-        stroke: $white;
-      }
-    }
-  }
+}
 
   /*
   .navbar {
@@ -101,15 +245,17 @@ body {
       }
     }
   }
-  */
-}
-
-@media screen and (min-width: 750px) {
-  body {
-    .navbar { 
-      .navbar-toggler {
-        display: none!important;
+  
+  /*
+  @media screen and (min-width: 750px) {
+    body {
+      .navbar { 
+        .navbar-toggler {
+          display: none!important;
+        }
       }
     }
   }
-}
+  */
+
+
